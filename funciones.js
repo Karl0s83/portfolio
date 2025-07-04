@@ -16,3 +16,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   typeWriter();
 });
+
+
+/* Esta función es para el cambio de idioma */
+
+let currentLang = 'es';
+
+function toggleLanguage() {
+  if (currentLang === 'es') {
+    currentLang = 'en';
+    document.getElementById('lang-toggle').textContent = 'ES';
+    // Aquí cambia a inglés
+    // loadEnglishTexts();
+  } else {
+    currentLang = 'es';
+    document.getElementById('lang-toggle').textContent = 'EN';
+    // Aquí cambia a español
+    // loadSpanishTexts();
+  }
+}
+
+function setLanguage(lang) {
+  currentLang = lang;
+  document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
+  // Aquí cambiarías el contenido según lang
+  // if (lang === 'es') { loadSpanishTexts(); }
+  // else { loadEnglishTexts(); }
+}

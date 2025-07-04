@@ -54,10 +54,10 @@ header {
   height: 32px;
   position: absolute;
   top: -5px;
-  left: -8px;
+  left: -5px;
   cursor: pointer;
   opacity: 0;
-  z-index: 11;
+  z-index: 12;
 }
 
 #menuToggle span {
@@ -68,7 +68,7 @@ header {
   position: relative;
   background: #ffc500;
   border-radius: 3px;
-  z-index: 12;
+  z-index: 11;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
@@ -145,6 +145,10 @@ header {
   color: #0a1f33;
 }
 
+/* #lang-toggle {
+  display: none;
+} */
+
 .sobremi {
   display: flex;
   flex-direction: column;
@@ -196,4 +200,13 @@ header {
   margin-top: 15px;
   font-size: 15px;
   padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  #lang-toggle {
+    display: inline-block;
+  }
+  .lang-mobile {
+    display: none;
+  }
 }
