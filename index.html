@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio Carlos ET</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="#"><img src="assets/logo.png" alt="logo" class="logo" /></a>
+        <nav role="navigation">
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">Sobre mi</a></li>
+              <li><a href="#info">Info</a></li>
+              <li><a href="#contact">Contacto</a></li>
+              <li><a href="" target="_blank">Proyectos</a></li>
+              <div class="lang-header">
+                <button class="lang-btn" onclick="setLanguage('es')">ES</button>
+                <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+              </div>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- <div>
+      <a href="">Tienes Tdah?</a>
+    </div> -->
+    <section class="sobremi" id="about">
+      <img src="assets/herophoto.jpg" alt="photo" class="profilephoto" />
+      <h1>Carlos Escribano Tiñena</h1>
+      <h2 id="typing"></h2>
+      <p>
+        ¡Hola! Me llamo Carlos, soy desarrollador frontend con pasión por el
+        diseño de interfaces claras, funcionales y con personalidad. Combino
+        código y creatividad para ofrecer experiencias que fluyan sin
+        distracciones.
+      </p>
+      <p>
+        Tengo TDAH, y eso me ha enseñado a ser especialmente sensible al orden,
+        la claridad y la accesibilidad en todo lo que creo. Me encanta aprender,
+        compartir y rodearme de gente que inspire y sume. Si hay algo que me
+        define, es la ilusión por seguir creando y mejorando cada día.
+      </p>
+    </section>
+    <script src="funciones.js"></script>
+  </body>
+</html>
