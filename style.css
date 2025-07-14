@@ -145,9 +145,9 @@ header {
   color: #0a1f33;
 }
 
-/* #lang-toggle {
+#lang-toggle {
   display: none;
-} */
+}
 
 .sobremi {
   display: flex;

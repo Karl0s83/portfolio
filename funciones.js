@@ -1,7 +1,7 @@
 /* Esta función está dirigida al texto debajo de la foto*/
 
 document.addEventListener("DOMContentLoaded", function () {
-  const text = "Frontend Developer | UI Designer | Retro Fan";
+  const text = "AWS Cloud | UI/UX Designer ";
   const target = document.getElementById("typing");
   if (!target) return;
   let i = 0;
