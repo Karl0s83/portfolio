@@ -6,8 +6,10 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   background: #8fa998;
+  height: 100%;
+  margin: auto;
 }
 
 header {
@@ -122,8 +124,10 @@ header {
 }
 
 #menuToggle input:checked~ul {
-  transform: none;
+  transform: translateX(0);
 }
+
+/*button language*/
 
 .lang-header {
   display: flex;
@@ -180,11 +184,29 @@ header {
   margin-bottom: 10px;
 }
 
-/* Project section */
+.sobremi p {
+  margin-top: 15px;
+  font-size: 15px;
+  padding: 0 15px;
+}
+
+/*section under my name*/
+
+#typing {
+  font-size: 15px;
+}
+
+#typing::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+/* Projects section */
 
 .projects {
   padding: 80px 0;
   text-align: center;
+  min-height: 100vh;
 }
 
 .project-list {
@@ -243,16 +265,100 @@ header {
   background: #ff3030;
 }
 
-/*Sección de debajo mi nombre*/
-#typing {
-  font-size: 15px;
+
+
+/* Contenedor general */
+.skills-section {
+  padding: 2rem;
+  max-width: 900px;
+  height: 100vh;
+  background: linear-gradient(135deg, #5ee969 0%, #ffffff 100%);
 }
 
-#typing::after {
-  content: "|";
-  animation: blink 1s infinite;
+.skills-header, h2{
+  padding: 10px 0;
+  margin: 15px 0 ;
+}
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
+.tab {
+  padding: 0.7rem 1.2rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  color: #000; /* Texto negro */
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background: rgba(0, 0, 0, 0.25);
+  color: #000;
+}
+
+.tab.active {
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  color: #000;
+}
+
+/* Paneles */
+.panel {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.panel:not([hidden]) {
+  opacity: 1;
+}
+
+/* Estilo de listas de skills */
+.skills-block h4 {
+  margin-bottom: 0.3rem;
+  color: #000; /* Negro */
+}
+
+.skills-block p {
+  margin-bottom: 1.2rem;
+  color: #222; /* Gris oscuro para mejor lectura */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+
+/* Mobile-first adjustments (small devices stack nicely) */
+@media (max-width: 520px) {
+  .skills-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .tabs {
+    width: 100%;
+  }
+}
+
+/* Desktop: panel más ancho y grid más denso */
+@media (min-width: 960px) {
+  .panel {
+    padding: 26px;
+  }
+
+  .skills-grid {
+    gap: 16px;
+  }
+}
+
+/*blink */
 @keyframes blink {
   0% {
     opacity: 1;
@@ -267,11 +373,7 @@ header {
   }
 }
 
-.sobremi p {
-  margin-top: 15px;
-  font-size: 15px;
-  padding: 0 15px;
-}
+
 
 @media (min-width: 768px) {
   #lang-toggle {
