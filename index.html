@@ -7,8 +7,7 @@
   <link rel="shortcut icon" href="assets/logo/favicon.png" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <title>Portfolio Carlos ET</title>
 </head>
@@ -45,19 +44,32 @@
 
   <!-- SOBRE MÍ -->
   <section class="sobremi" id="about">
-    <img src="assets/herophoto.jpg" alt="Carlos Escribano" class="profilephoto" />
-    <h1>Carlos Escribano Tiñena</h1>
-    <h2 id="typing"></h2>
+    <div class="about-container">
+      <img src="assets/imgs/herophoto.jpg" alt="Carlos Escribano" class="profilephoto" />
 
-    <p>
-      ¡Hola! Me llamo Carlos, soy desarrollador frontend con pasión por el diseño de interfaces claras,
-      funcionales y con personalidad.
-    </p>
+      <div class="about-text">
+        <h1>Carlos Escribano Tiñena</h1>
+        <h2 id="typing"></h2>
 
-    <p>
-      Tengo TDAH, y eso me ha enseñado a ser especialmente sensible al orden, la claridad y la accesibilidad.
-      Me encanta aprender, compartir y crear experiencias que fluyan sin distracciones.
-    </p>
+        <p>
+          ¡Hola! Me llamo Carlos, soy <strong>desarrollador frontend</strong> con pasión por interfaces claras,
+          funcionales y con personalidad.
+        </p>
+
+        <p>
+          Tengo <strong>TDAH</strong>, lo que me ha enseñado a ser especialmente sensible al <strong>orden, claridad y
+            accesibilidad</strong>.
+          Me encanta aprender, compartir y crear experiencias que fluyan sin distracciones.
+        </p>
+
+        <ul class="about-highlights">
+          <li>💻 Frontend Development</li>
+          <li>🎨 UI / UX Design</li>
+          <li>☁️ AWS Cloud</li>
+          <li>⚡ Automatización y optimización</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- PROYECTOS -->
@@ -129,6 +141,18 @@
       </div>
     </div>
   </section>
+
+  <section id="cv-download" class="cv-section">
+    <img src="assets/imgs/cv_icon.png" alt="cv-icon" class="cv-icon" />
+    <p>Puedes descargar mi currículum actualizado aquí, o también puedes encontrarme en LinkedIn:</p>
+    <div class="cv-links">
+      <a href="/assets/cv/CV_Carlos_Escribanor_IT.pdf" download class="cv-btn">Descargar CV</a>
+      <a href="https://www.linkedin.com/in/carlos-escribano-ti%C3%B1ena/" target="_blank" class="cv-btn linkedin-btn">LinkedIn</a>
+    </div>
+  </section>
+
+
+
 
   <script src="funciones.js"></script>
 </body>

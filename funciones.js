@@ -11,6 +11,23 @@ document.querySelectorAll("#menu a").forEach(link => {
   });
 });
 
+//typing efect
+document.addEventListener("DOMContentLoaded", () => {
+  const typingText = "AWS Cloud · Frontend Developer · UI/UX Designer";
+  const typingElement = document.getElementById("typing");
+  let index = 0;
+
+  function type() {
+    if (index < typingText.length) {
+      typingElement.textContent += typingText.charAt(index);
+      index++;
+      setTimeout(type, 70);
+    }
+  }
+
+  type();
+});
+
 // sistem tabs
 const tabs = document.querySelectorAll(".tab");
 const panels = document.querySelectorAll(".panel");
