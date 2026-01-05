@@ -1,160 +1,333 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/logo/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Portfolio Carlos ET</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="assets/logo/favicon.png" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <title>Portfolio Carlos ET</title>
-</head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="#"
+          ><img src="assets/logo/logo.png" alt="logo" class="logo"
+        /></a>
 
-<body>
-  <header>
-    <div class="header-container">
-      <a href="#"><img src="assets/logo/logo.png" alt="logo" class="logo" /></a>
+        <!-- Menú hamburguesa -->
+        <nav>
+          <div id="menuToggle">
+            <input type="checkbox" id="menu-checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
 
-      <!-- Menú hamburguesa -->
-      <nav>
-        <div id="menuToggle">
-          <input type="checkbox" id="menu-checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
+            <ul id="menu">
+              <li><a href="#" data-i18n="nav_home">Home</a></li>
+              <li><a href="#about" data-i18n="nav_about">Sobre mí</a></li>
+              <li>
+                <a href="#projects" data-i18n="nav_projects">Proyectos</a>
+              </li>
+              <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+              <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
 
-          <ul id="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contacto</a></li>
+              <div class="lang-header">
+                <button
+                  class="lang-btn"
+                  onclick="setLanguage('ca')"
+                  aria-label="Canviar a Català"
+                >
+                  CA
+                </button>
+                <button
+                  class="lang-btn"
+                  onclick="setLanguage('es')"
+                  aria-label="Cambiar a Español"
+                >
+                  ES
+                </button>
+                <button
+                  class="lang-btn"
+                  onclick="setLanguage('en')"
+                  aria-label="Switch to English"
+                >
+                  EN
+                </button>
+              </div>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-            <div class="lang-header">
-              <button class="lang-btn" onclick="setLanguage('es')">ES</button>
-              <button class="lang-btn" onclick="setLanguage('en')">EN</button>
-            </div>
+    <!-- SOBRE MÍ -->
+    <section class="sobremi reveal" id="about">
+      <div class="about-container">
+        <img
+          src="assets/imgs/herophoto.jpg"
+          alt="Carlos Escribano"
+          class="profilephoto"
+        />
+
+        <div class="about-text">
+          <h1>Carlos Escribano Tiñena</h1>
+          <h2 id="typing"></h2>
+
+          <p data-i18n="hero_greeting">
+            ¡Hola! Me llamo Carlos, soy
+            <strong>desarrollador frontend</strong> con pasión por interfaces
+            claras, funcionales y con personalidad.
+          </p>
+
+          <p data-i18n="hero_description">
+            Me encanta aprender, compartir y crear experiencias que fluyan sin
+            distracciones.
+          </p>
+
+          <ul class="about-highlights">
+            <li>💻 Frontend Development</li>
+            <li>🎨 UI / UX Design</li>
+            <li>☁️ AWS Cloud</li>
+            <li>⚡ Automatización y optimización</li>
           </ul>
         </div>
-      </nav>
-    </div>
-  </header>
-
-  <!-- SOBRE MÍ -->
-  <section class="sobremi" id="about">
-    <div class="about-container">
-      <img src="assets/imgs/herophoto.jpg" alt="Carlos Escribano" class="profilephoto" />
-
-      <div class="about-text">
-        <h1>Carlos Escribano Tiñena</h1>
-        <h2 id="typing"></h2>
-
-        <p>
-          ¡Hola! Me llamo Carlos, soy <strong>desarrollador frontend</strong> con pasión por interfaces claras,
-          funcionales y con personalidad.
-        </p>
-
-        <p>
-          Tengo <strong>TDAH</strong>, lo que me ha enseñado a ser especialmente sensible al <strong>orden, claridad y
-            accesibilidad</strong>.
-          Me encanta aprender, compartir y crear experiencias que fluyan sin distracciones.
-        </p>
-
-        <ul class="about-highlights">
-          <li>💻 Frontend Development</li>
-          <li>🎨 UI / UX Design</li>
-          <li>☁️ AWS Cloud</li>
-          <li>⚡ Automatización y optimización</li>
-        </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROYECTOS -->
-  <section class="projects" id="projects">
-    <h2>Proyectos</h2>
+    <!-- PROYECTOS -->
+    <section class="projects reveal" id="projects">
+      <h2 data-i18n="projects_title">Proyectos</h2>
 
-    <div class="project-list">
-
-      <div class="project-card">
-        <img src="assets/projects/roquetes_logo.jpg" alt="Roquetes Turisme" class="project-img">
-        <h3>Roquetes Turisme</h3>
-        <p>Página web oficial para el Ayuntamiento de Roquetes (Baix Ebre), creada con WordPress + Divi.</p>
-        <a href="https://roquetesturisme.cat" target="_blank" class="project-btn">Ver proyecto</a>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/projects/logobash.jpg" alt="Bash Script" class="project-img">
-        <h3>Organizador de Descargas</h3>
-        <p>Script en Bash que clasifica automáticamente archivos por extensión en carpetas organizadas.</p>
-        <a href="#" class="project-btn">Ver código</a>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/underconstruction/enconstruccion.jpg" alt="Coming Soon" class="project-img">
-        <h3>Coming Soon</h3>
-        <p>Proyecto próximamente disponible.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="skills-section">
-    <div class="skills-header">
-      <h2>Skills</h2>
-
-      <div class="tabs" role="tablist">
-        <button role="tab" aria-selected="true" aria-controls="hard" id="tab-hard" class="tab active">
-          Hard Skills
-        </button>
-
-        <button role="tab" aria-selected="false" aria-controls="soft" id="tab-soft" class="tab">
-          Soft Skills
-        </button>
-      </div>
-    </div>
-
-    <div class="tabs-content">
-      <div id="hard" role="tabpanel" aria-labelledby="tab-hard" class="panel">
-        <div class="skills-block">
-          <h4>Lenguajes:</h4>
-          <p>HTML · CSS · JavaScript · PHP · Python · Node.js</p>
-
-          <h4>Herramientas:</h4>
-          <p>Git · GitHub · VSCode · WordPress (Divi / Elementor)</p>
-
-          <h4>Sistemas y Cloud:</h4>
-          <p>Windows · Linux · AWS</p>
+      <div class="project-list">
+        <div class="project-card">
+          <img
+            src="assets/projects/roquetes_logo.jpg"
+            alt="Roquetes Turisme"
+            class="project-img"
+          />
+          <h3>Roquetes Turisme</h3>
+          <p data-i18n="project_roquetes_desc">
+            Página web oficial para el Ayuntamiento de Roquetes (Baix Ebre),
+            creada con WordPress + Divi.
+          </p>
+          <div class="project-badges">
+            <span class="badge">WordPress</span>
+            <span class="badge">Divi</span>
+          </div>
+          <a
+            href="https://roquetesturisme.cat"
+            target="_blank"
+            class="project-btn"
+            data-i18n="btn_view_project"
+            >Ver proyecto</a
+          >
         </div>
-      </div>
 
-      <div id="soft" role="tabpanel" aria-labelledby="tab-soft" class="panel" hidden>
-        <div class="skills-block">
-          <h4>Soft Skills:</h4>
-          <p>Organización · Comunicación · Resolución de problemas · Atención al detalle · Trabajo en equipo ·
-            Gestión del tiempo · Flexibilidad · Empatía
+        <div class="project-card">
+          <img
+            src="assets/projects/logobash.jpg"
+            alt="Bash Script"
+            class="project-img"
+          />
+          <h3>Organizador de Descargas</h3>
+          <p data-i18n="project_organizer_desc">
+            Script en Bash que clasifica automáticamente archivos por extensión
+            en carpetas organizadas.
+          </p>
+          <div class="project-badges">
+            <span class="badge">Bash</span>
+            <span class="badge">Linux</span>
+          </div>
+          <a
+            href="https://github.com/Karl0s83/organize_downloads"
+            class="project-btn"
+            data-i18n="btn_view_code"
+            >Ver código</a
+          >
+        </div>
+
+        <div class="project-card">
+          <img
+            src="assets/underconstruction/enconstruccion.jpg"
+            alt="Coming Soon"
+            class="project-img"
+          />
+          <h3>Coming Soon</h3>
+          <p data-i18n="project_coming_soon_desc">
+            Proyecto próximamente disponible.
           </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="cv-download" class="cv-section">
-    <img src="assets/imgs/cv_icon.png" alt="cv-icon" class="cv-icon" />
-    <p>Puedes descargar mi currículum actualizado aquí, o también puedes encontrarme en LinkedIn:</p>
-    <div class="cv-links">
-      <a href="/assets/cv/CV_Carlos_Escribanor_IT.pdf" download class="cv-btn">Descargar CV</a>
-      <a href="https://www.linkedin.com/in/carlos-escribano-ti%C3%B1ena/" target="_blank" class="cv-btn linkedin-btn">LinkedIn</a>
-    </div>
-  </section>
+    <!-- SKILLS -->
+    <section id="skills" class="skills-section reveal">
+      <div class="skills-header">
+        <h2 data-i18n="skills_title">Skills</h2>
 
+        <div class="tabs" role="tablist">
+          <button
+            role="tab"
+            aria-selected="true"
+            aria-controls="hard"
+            id="tab-hard"
+            class="tab active"
+            data-i18n="skills_hard"
+          >
+            Hard Skills
+          </button>
 
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="soft"
+            id="tab-soft"
+            class="tab"
+            data-i18n="skills_soft"
+          >
+            Soft Skills
+          </button>
+        </div>
+      </div>
 
+      <div class="tabs-content">
+        <div id="hard" role="tabpanel" aria-labelledby="tab-hard" class="panel">
+          <div class="skills-block">
+            <h4 data-i18n="skills_lang_title">Lenguajes:</h4>
+            <div class="tech-grid">
+              <div class="tech-item">
+                <i class="fa-brands fa-html5"></i><span>HTML</span>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-js"></i><span>JS</span>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-php"></i><span>PHP</span>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-python"></i><span>Python</span>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-node"></i><span>Node.js</span>
+              </div>
+            </div>
 
-  <script src="funciones.js"></script>
-</body>
+            <h4 data-i18n="skills_tools_title">Herramientas:</h4>
+            <div class="tech-grid">
+              <div class="tech-item">
+                <i class="fa-brands fa-git-alt"></i><span>Git</span>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-github"></i><span>GitHub</span>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-wordpress"></i><span>WordPress</span>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-aws"></i><span>AWS</span>
+              </div>
+            </div>
 
+            <h4 data-i18n="skills_cloud_title">Sistemas y Cloud:</h4>
+            <div class="tech-grid">
+              <div class="tech-item">
+                <i class="fa-brands fa-windows"></i><span>Windows</span>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-linux"></i><span>Linux</span>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-aws"></i><span>AWS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="soft"
+          role="tabpanel"
+          aria-labelledby="tab-soft"
+          class="panel"
+          hidden
+        >
+          <div class="skills-block">
+            <h4 data-i18n="skills_soft_title">Soft Skills:</h4>
+            <p data-i18n="skills_soft_list">
+              Organización · Comunicación · Resolución de problemas · Atención
+              al detalle · Trabajo en equipo · Gestión del tiempo · Flexibilidad
+              · Empatía
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cv-section">
+      <img src="assets/imgs/cv_icon.png" alt="cv-icon" class="cv-icon" />
+      <p data-i18n="cv_text">
+        Puedes descargar mi currículum actualizado aquí, o también puedes
+        encontrarme en LinkedIn:
+      </p>
+      <div class="cv-links">
+        <a
+          href="/assets/cv/CV_Carlos_Escribanor_IT.pdf"
+          download
+          class="cv-btn"
+          data-i18n="btn_download_cv"
+          aria-label="Descargar currículum vitae"
+          >Descargar CV</a
+        >
+        <a
+          href="https://www.linkedin.com/in/carlos-escribano-ti%C3%B1ena/"
+          target="_blank"
+          class="cv-btn linkedin-btn"
+          aria-label="Visitar perfil de LinkedIn"
+          >LinkedIn</a
+        >
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>
+          &copy; <span id="year"></span> Carlos Escribano Tiñena. All rights
+          reserved.
+        </p>
+        <div class="footer-socials">
+          <a
+            href="https://www.linkedin.com/in/carlos-escribano-ti%C3%B1ena/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><img
+              src="assets/imgs/cv_icon.png"
+              alt="LinkedIn"
+              class="social-icon"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="funciones.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
